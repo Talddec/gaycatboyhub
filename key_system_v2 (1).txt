@@ -1,0 +1,179 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest", IntroText = "Gaming's Hub Key System"})
+local Tab = Window:MakeTab({ 
+    Name = "Redeem key", 
+    Icon = "rbxassetid://4483345998", 
+    PremiumOnly = false
+}) 
+ 
+_G.Key = "TYSMFor250Members!" 
+_G.KeyInput = "string"
+function MakeScriptHub()
+loadstring(game:HttpGet("https://pastebin.com/raw/EsVRJaKs"))() 
+end
+ 
+function CorrectKeyNotification() 
+OrionLib:MakeNotification({ 
+    Name = "Logged In!", 
+    Content = "Succesfully Logged In!",
+    Image = "rbxassetid://4483345998", 
+    Time = 5
+})
+end 
+ 
+function IncorrectKeyNotification() 
+OrionLib:MakeNotification({
+    Name = "You have entered the incorrect key!", 
+    Content = "Please Enter The Correct Key! Get It By Joining Our Discord!",
+    Image = "rbxassetid://4483345998", 
+    Time = 5
+}) 
+end
+ 
+Tab:AddTextbox({
+    Name = "Key System", 
+    Default = "",
+    TextDisappear = true, 
+    Callback = function(Value)
+        _G.KeyInput = Value 
+    end      
+}) 
+ 
+Tab:AddButton({
+    Name = "Check Key", 
+    Callback = function() 
+              if _G.KeyInput == _G.Key then
+            MakeScriptHub() 
+            CorrectKeyNotification()
+            task.wait()
+            OrionLib:Destroy() 
+            else
+                IncorrectKeyNotification()
+            end
+      end     
+})
+Tab:AddButton({
+    Name = "Get Key (Copy Discord Server Link To Clipboard)", 
+    Callback = function() 
+    setclipboard("https://discord.gg/6eEb9EQ2mj")
+    toclipboard("https://discord.gg/6eEb9EQ2mj")
+              print("Succesfully Copied To Clipboard!")
+      end     
+})
+
+local Tab = Window:MakeTab({
+	Name = "Games",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Super Bomb Survival",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 164051105) -- Game ID
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Evade",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 9872472334) -- Game ID
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Game Store Tycoon",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 10963175) -- Game ID
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Refinery Caves",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 8726743209) -- Game ID
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "My Restaurant",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 4490140733) -- Game ID
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "BIG Paintball",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 3527629287) -- Game ID
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Break In (Story)",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 3851622790) -- Game ID
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Broken Bones IV",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 2551991523) -- Game ID
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Wheat Farming Simulator",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 10106105124) -- Game ID
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Ninja Legends",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 3956818381) -- Game ID
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Hide And Seek Extreme",
+	Callback = function()
+for i,v in pairs(game.Players:GetPlayers()) do
+   game:GetService("TeleportService"):Teleport(v, 205224386) -- Game ID
+end
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Updates",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Update 1")
+Tab:AddParagraph("TYSM For 250 Discord Members!","This is a really high goal to achieve, tysm to everyone who joined and contributed to this goal, because we hit 250 members, we will host a few giveaways in the giveaway channel.")
+Tab:AddParagraph("Update Logs", "(+)Added A New Hide And Seek Extreme Script (Autofarm, Auto collect Coins And Much More)                                                      (-)Removed Shindo Life (Inf Rell Coins Got Patched...)")
+
+OrionLib:Init()
